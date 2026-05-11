@@ -15,6 +15,7 @@ out/
 
 # Secrets (even though we don't use API in default flow)
 .env
+rovenv
 
 # Python
 __pycache__/
