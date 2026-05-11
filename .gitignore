@@ -1,0 +1,34 @@
+# Data — kept outside the repo
+data/
+VIDEO*/
+*.mp4
+*.MP4
+*.csv
+*.dtlog
+Rov_Immagine.docx
+
+# Outputs
+out/
+
+# Model cache (HF will manage this in ~/.cache; just in case)
+.huggingface/
+
+# Secrets (even though we don't use API in default flow)
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Editors
+.vscode/
+.idea/
+.DS_Store
