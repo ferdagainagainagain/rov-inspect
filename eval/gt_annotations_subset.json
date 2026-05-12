@@ -12,7 +12,29 @@
       "presenza_ciottoli": false,
       "copertura_algale": "diffusa",
       "taxa_algali": [],
-      "elementi_antropici": ["rocce_antropiche"],
+      "elementi_antropici": [
+        "rocce_antropiche"
+      ],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 2,
+    "video": 1,
+    "photo": 2,
+    "image_path": "eval/gt_images/figure_02.jpg",
+    "original_caption": "Figura 2 – Messina - video 1 Foto 2 - Fondale caratterizzato dalla presenza di massi antropici ricoperti da vegetazione algale",
+    "expected": {
+      "tipo_fondale": "rocce_antropiche",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": false,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [
+        "rocce_antropiche"
+      ],
       "fauna": []
     },
     "annotator_notes": ""
@@ -36,11 +58,47 @@
     "annotator_notes": ""
   },
   {
+    "figure_id": 4,
+    "video": 1,
+    "photo": 4,
+    "image_path": "eval/gt_images/figure_04.jpg",
+    "original_caption": "Figura 4 – Messina - video 1 Foto 4 - Fondale sabbioso con presenza sporadica di rocce",
+    "expected": {
+      "tipo_fondale": "sabbioso",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": false,
+      "copertura_algale": "assente",
+      "taxa_algali": [],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": "Rocks are sporadic; algae not mentioned"
+  },
+  {
     "figure_id": 5,
     "video": 1,
     "photo": 5,
     "image_path": "eval/gt_images/figure_05.jpg",
     "original_caption": "Figura 5 – Messina - video 1 Foto 5 - Fondale sabbioso con presenza di rocce di diversa taglia",
+    "expected": {
+      "tipo_fondale": "sabbioso",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": false,
+      "copertura_algale": "assente",
+      "taxa_algali": [],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 6,
+    "video": 1,
+    "photo": 6,
+    "image_path": "eval/gt_images/figure_06.jpg",
+    "original_caption": "Figura 6-Messina-video 1 Foto 6- Fondale sabbioso con presenza sporadica di rocce",
     "expected": {
       "tipo_fondale": "sabbioso",
       "granulometria": null,
@@ -69,7 +127,25 @@
       "elementi_antropici": [],
       "fauna": []
     },
-    "annotator_notes": "GT notes rocks are sporadic"
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 8,
+    "video": 2,
+    "photo": 2,
+    "image_path": "eval/gt_images/figure_08.jpg",
+    "original_caption": "Figura 8-Messina-video 2 Foto 2- Fondale sabbioso con presenza di rocce ricoperte da vegetazione algale",
+    "expected": {
+      "tipo_fondale": "sabbioso",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": false,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": ""
   },
   {
     "figure_id": 9,
@@ -83,8 +159,30 @@
       "presenza_rocce": true,
       "presenza_ciottoli": false,
       "copertura_algale": "diffusa",
-      "taxa_algali": ["detrito_algale"],
-      "elementi_antropici": ["rete_da_pesca"],
+      "taxa_algali": [
+        "detrito_algale"
+      ],
+      "elementi_antropici": [
+        "rete_da_pesca"
+      ],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 10,
+    "video": 2,
+    "photo": 4,
+    "image_path": "eval/gt_images/figure_10.jpg",
+    "original_caption": "Figura 10-Messina-video 2 Foto 4-Fondale con ghiaia media con presenza sporadica di rocce",
+    "expected": {
+      "tipo_fondale": "ghiaioso",
+      "granulometria": "media",
+      "presenza_rocce": true,
+      "presenza_ciottoli": false,
+      "copertura_algale": "assente",
+      "taxa_algali": [],
+      "elementi_antropici": [],
       "fauna": []
     },
     "annotator_notes": ""
@@ -106,6 +204,24 @@
       "fauna": []
     },
     "annotator_notes": ""
+  },
+  {
+    "figure_id": 12,
+    "video": 2,
+    "photo": 6,
+    "image_path": "eval/gt_images/figure_12.jpg",
+    "original_caption": "Figura 12-Messina-video 2 Foto 6-Fondale con ghiaia media con presenza una roccia ricoperta da vegetazione algale",
+    "expected": {
+      "tipo_fondale": "ghiaioso",
+      "granulometria": "media",
+      "presenza_rocce": true,
+      "presenza_ciottoli": false,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": "Caption says one single rock; encoded as presenza_rocce=true"
   },
   {
     "figure_id": 13,
@@ -133,6 +249,42 @@
     "original_caption": "Figura 14-Messina-video 3 Foto 1-Fondale sabbioso misto a ghiaia, con rocce ricoperte da vegetazione algale",
     "expected": {
       "tipo_fondale": "sabbioso_misto_a_ghiaia",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": false,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 15,
+    "video": 3,
+    "photo": 2,
+    "image_path": "eval/gt_images/figure_15.jpg",
+    "original_caption": "Figura 15-Messina-video 3 Foto 2-Fondale ghiaioso con presenza di rocce ricoperte da vegetazione algale",
+    "expected": {
+      "tipo_fondale": "ghiaioso",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": false,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 16,
+    "video": 3,
+    "photo": 3,
+    "image_path": "eval/gt_images/figure_16.jpg",
+    "original_caption": "Figura 16-Messina-video 3 Foto 3- Fondale ghiaioso con presenza di rocce ricoperte da vegetazione algale",
+    "expected": {
+      "tipo_fondale": "ghiaioso",
       "granulometria": null,
       "presenza_rocce": true,
       "presenza_ciottoli": false,
@@ -173,11 +325,33 @@
       "presenza_rocce": false,
       "presenza_ciottoli": true,
       "copertura_algale": "diffusa",
-      "taxa_algali": ["Asparagopsis"],
+      "taxa_algali": [
+        "Asparagopsis"
+      ],
       "elementi_antropici": [],
       "fauna": []
     },
-    "annotator_notes": "GT mentions both piccola and media sized ciottoli; encoded as ciottoli_medi (the larger)"
+    "annotator_notes": "Both piccola and media sizes; encoded as larger (ciottoli_medi)"
+  },
+  {
+    "figure_id": 19,
+    "video": 3,
+    "photo": 6,
+    "image_path": "eval/gt_images/figure_19.jpg",
+    "original_caption": "Figura 19-Messina-video 3 Foto 6- Fondale con ghiaia grossolana, presenza di vegetazione algale tra cui alghe rosse probabilmente riconducibili al genere Asparagopsis",
+    "expected": {
+      "tipo_fondale": "ghiaioso",
+      "granulometria": "grossolana",
+      "presenza_rocce": false,
+      "presenza_ciottoli": false,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [
+        "Asparagopsis"
+      ],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": ""
   },
   {
     "figure_id": 20,
@@ -216,6 +390,42 @@
     "annotator_notes": ""
   },
   {
+    "figure_id": 22,
+    "video": 4,
+    "photo": 2,
+    "image_path": "eval/gt_images/figure_22.jpg",
+    "original_caption": "Figura 22-Messina-video 4 Foto 2- Fondale sabbioso, misto a ghiaia con presenza di rocce e ciottoli ricoperti da vegetazione algale",
+    "expected": {
+      "tipo_fondale": "sabbioso_misto_a_ghiaia",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": true,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 23,
+    "video": 4,
+    "photo": 3,
+    "image_path": "eval/gt_images/figure_23.jpg",
+    "original_caption": "Figura 23-Messina-video 4 Foto 3-Fondale sabbioso con rocce e ciottoli ricoperti da vegetazione algale",
+    "expected": {
+      "tipo_fondale": "sabbioso",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": true,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
     "figure_id": 24,
     "video": 4,
     "photo": 4,
@@ -227,7 +437,9 @@
       "presenza_rocce": true,
       "presenza_ciottoli": false,
       "copertura_algale": "diffusa",
-      "taxa_algali": ["Asparagopsis"],
+      "taxa_algali": [
+        "Asparagopsis"
+      ],
       "elementi_antropici": [],
       "fauna": []
     },
@@ -246,10 +458,30 @@
       "presenza_ciottoli": false,
       "copertura_algale": "diffusa",
       "taxa_algali": [],
-      "elementi_antropici": ["rifiuto_plastico"],
+      "elementi_antropici": [
+        "rifiuto_plastico"
+      ],
       "fauna": []
     },
-    "annotator_notes": "GT says 'rifiuto antropico' generically; encoded as rifiuto_plastico as best-fit category in schema"
+    "annotator_notes": "Generic 'rifiuto antropico'; encoded as rifiuto_plastico"
+  },
+  {
+    "figure_id": 26,
+    "video": 4,
+    "photo": 6,
+    "image_path": "eval/gt_images/figure_26.jpg",
+    "original_caption": "Figura 26-Messina-video 4 Foto 6-Fondale ghiaioso con presenza di ciottoli di piccola taglia",
+    "expected": {
+      "tipo_fondale": "ghiaioso",
+      "granulometria": "ciottoli_piccoli",
+      "presenza_rocce": false,
+      "presenza_ciottoli": true,
+      "copertura_algale": "assente",
+      "taxa_algali": [],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": ""
   },
   {
     "figure_id": 27,
@@ -266,9 +498,117 @@
       "taxa_algali": [],
       "elementi_antropici": [],
       "fauna": [
-        {"tipo": "stella_marina", "specie": "Ophidiaster ophidianus"},
-        {"tipo": "stella_marina", "specie": "Marthasterias glacialis"}
+        {
+          "tipo": "stella_marina",
+          "specie": "Ophidiaster ophidianus"
+        },
+        {
+          "tipo": "stella_marina",
+          "specie": "Marthasterias glacialis"
+        }
       ]
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 28,
+    "video": 4,
+    "photo": 8,
+    "image_path": "eval/gt_images/figure_28.jpg",
+    "original_caption": "Figura 28-Messina-video 4 Foto 8- Fondale ghiaioso con ciottoli di piccola taglia presenza di alghe rosse probabilmente riconducibili ai generi Asparagopsis e Jania; presenza di rifiuti antropici di origine plastica",
+    "expected": {
+      "tipo_fondale": "ghiaioso",
+      "granulometria": "ciottoli_piccoli",
+      "presenza_rocce": false,
+      "presenza_ciottoli": true,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [
+        "Asparagopsis",
+        "Jania"
+      ],
+      "elementi_antropici": [
+        "rifiuto_plastico"
+      ],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 29,
+    "video": 4,
+    "photo": 9,
+    "image_path": "eval/gt_images/figure_29.jpg",
+    "original_caption": "Figura 29-Messina-video 4 Foto 9- Fondale ghiaioso con vegetazione algale e presenza di rocce",
+    "expected": {
+      "tipo_fondale": "ghiaioso",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": false,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 30,
+    "video": 4,
+    "photo": 10,
+    "image_path": "eval/gt_images/figure_30.jpg",
+    "original_caption": "Figura 30-Messina-video 4 Foto 10- Fondale ghiaioso con presenza di ciottoli di piccola taglia e rocce, presenza di vegetazione algale tra cui alghe rosse incrostanti, probabilmente appartenenti all'ordine delle Corallinales ed altri esemplari probabilmente appartenenti al genere Peyssonelia",
+    "expected": {
+      "tipo_fondale": "ghiaioso",
+      "granulometria": "ciottoli_piccoli",
+      "presenza_rocce": true,
+      "presenza_ciottoli": true,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [
+        "Corallinales",
+        "Peyssonelia"
+      ],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 31,
+    "video": 4,
+    "photo": 11,
+    "image_path": "eval/gt_images/figure_31.jpg",
+    "original_caption": "Figura 31-Messina-video 4 Foto 11- Fondale ghiaioso con presenza di ciottoli di piccola taglia e rocce, presenza di vegetazione algale tra cui probabilmente: il genere Peyssonelia (alga rossa), esemplari di alghe rosse incrostanti riconducibili all'ordine delle Corallinales ed alghe brune appartenenti all'ordine delle Laminariales",
+    "expected": {
+      "tipo_fondale": "ghiaioso",
+      "granulometria": "ciottoli_piccoli",
+      "presenza_rocce": true,
+      "presenza_ciottoli": true,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [
+        "Peyssonelia",
+        "Corallinales",
+        "Laminariales"
+      ],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 32,
+    "video": 5,
+    "photo": 1,
+    "image_path": "eval/gt_images/figure_32.jpg",
+    "original_caption": "Figura 32-Messina-video 5 Foto 1-Fondale sabbioso misto a ghiaia con ciottoli ricoperti da vegetazione algale",
+    "expected": {
+      "tipo_fondale": "sabbioso_misto_a_ghiaia",
+      "granulometria": null,
+      "presenza_rocce": false,
+      "presenza_ciottoli": true,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [],
+      "fauna": []
     },
     "annotator_notes": ""
   },
@@ -291,6 +631,78 @@
     "annotator_notes": ""
   },
   {
+    "figure_id": 34,
+    "video": 5,
+    "photo": 3,
+    "image_path": "eval/gt_images/figure_34.jpg",
+    "original_caption": "Figura 34-Messina-video 5 Foto 3-Fondale sabbioso misto a ghiaia con rocce ricoperte da vegetazione algale",
+    "expected": {
+      "tipo_fondale": "sabbioso_misto_a_ghiaia",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": false,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 35,
+    "video": 5,
+    "photo": 4,
+    "image_path": "eval/gt_images/figure_35.jpg",
+    "original_caption": "Figura 35-Messina-video 5 Foto 4-Fondale sabbioso ricoperto da vegetazione algale",
+    "expected": {
+      "tipo_fondale": "sabbioso",
+      "granulometria": null,
+      "presenza_rocce": false,
+      "presenza_ciottoli": false,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 36,
+    "video": 5,
+    "photo": 5,
+    "image_path": "eval/gt_images/figure_36.jpg",
+    "original_caption": "Figura 36-Messina-video 5 Foto 5-Fondale ghiaioso con presenza di ciottoli di picco taglia e rocce ricoperte da vegetazione algale",
+    "expected": {
+      "tipo_fondale": "ghiaioso",
+      "granulometria": "ciottoli_piccoli",
+      "presenza_rocce": true,
+      "presenza_ciottoli": true,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": "Typo in caption: 'picco taglia' = piccola taglia"
+  },
+  {
+    "figure_id": 37,
+    "video": 5,
+    "photo": 6,
+    "image_path": "eval/gt_images/figure_37.jpg",
+    "original_caption": "Figura 37-Messina-video 5 Foto 6-Fondale sabbioso misto a ghiaia",
+    "expected": {
+      "tipo_fondale": "sabbioso_misto_a_ghiaia",
+      "granulometria": null,
+      "presenza_rocce": false,
+      "presenza_ciottoli": false,
+      "copertura_algale": "assente",
+      "taxa_algali": [],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
     "figure_id": 38,
     "video": 5,
     "photo": 7,
@@ -302,7 +714,212 @@
       "presenza_rocce": false,
       "presenza_ciottoli": false,
       "copertura_algale": "diffusa",
-      "taxa_algali": ["Jania"],
+      "taxa_algali": [
+        "Jania"
+      ],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 39,
+    "video": 5,
+    "photo": 8,
+    "image_path": "eval/gt_images/figure_39.jpg",
+    "original_caption": "Figura 39-Messina-video 5 Foto 8- Fondale sabbioso misto a ghiaia, con presenza di detrito algale",
+    "expected": {
+      "tipo_fondale": "sabbioso_misto_a_ghiaia",
+      "granulometria": null,
+      "presenza_rocce": false,
+      "presenza_ciottoli": false,
+      "copertura_algale": "sporadica",
+      "taxa_algali": [
+        "detrito_algale"
+      ],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": "Algal detritus encoded under taxa_algali per schema"
+  },
+  {
+    "figure_id": 40,
+    "video": 6,
+    "photo": 1,
+    "image_path": "eval/gt_images/figure_40.jpg",
+    "original_caption": "Figura 40-Messina-video 6 Foto 1-Fondale sabbioso",
+    "expected": {
+      "tipo_fondale": "sabbioso",
+      "granulometria": null,
+      "presenza_rocce": false,
+      "presenza_ciottoli": false,
+      "copertura_algale": "assente",
+      "taxa_algali": [],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 41,
+    "video": 6,
+    "photo": 2,
+    "image_path": "eval/gt_images/figure_41.jpg",
+    "original_caption": "Figura 41-Messina-video 6 Foto 2-Fondale sabbioso con presenza di rocce e ciottoli ricoperti da vegetazione algale",
+    "expected": {
+      "tipo_fondale": "sabbioso",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": true,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 42,
+    "video": 6,
+    "photo": 3,
+    "image_path": "eval/gt_images/figure_42.jpg",
+    "original_caption": "Figura 42-Messina-video 6 Foto 3-Fondale ghiaioso con presenza di rocce e ciottoli di piccola taglia ricoperti da vegetazione algale",
+    "expected": {
+      "tipo_fondale": "ghiaioso",
+      "granulometria": "ciottoli_piccoli",
+      "presenza_rocce": true,
+      "presenza_ciottoli": true,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 43,
+    "video": 6,
+    "photo": 4,
+    "image_path": "eval/gt_images/figure_43.jpg",
+    "original_caption": "Figura 43-Messina-video 6 Foto 4-Fondale ghiaioso con presenza di rocce e ciottoli ricoperti da vegetazione algale",
+    "expected": {
+      "tipo_fondale": "ghiaioso",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": true,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 44,
+    "video": 7,
+    "photo": 1,
+    "image_path": "eval/gt_images/figure_44.jpg",
+    "original_caption": "Figura 44-Messina-video 7 Foto 1-Fondale sabbioso a destra, ghiaioso con presenza di rocce e ciottoli ricoperti da vegetazione algale a sinistra",
+    "expected": {
+      "tipo_fondale": "sabbioso_misto_a_ghiaia",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": true,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": "Heterogeneous frame (sand right / gravel left); encoded as mixed"
+  },
+  {
+    "figure_id": 45,
+    "video": 7,
+    "photo": 2,
+    "image_path": "eval/gt_images/figure_45.jpg",
+    "original_caption": "Figura 45-Messina-video 7 Foto 2-Fondale ghiaioso con presenza di rocce e ciottoli ricoperti da vegetazione algale",
+    "expected": {
+      "tipo_fondale": "ghiaioso",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": true,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 46,
+    "video": 7,
+    "photo": 3,
+    "image_path": "eval/gt_images/figure_46.jpg",
+    "original_caption": "Figura 46-Messina-video 7 Foto 3-Fondale ghiaioso con presenza di rocce e ciottoli ricoperti da vegetazione algale; presenza di rifiuti metallici di origine antropica, forse riconducibili a parte di un relitto",
+    "expected": {
+      "tipo_fondale": "ghiaioso",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": true,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [
+        "rifiuto_metallico",
+        "parti_di_relitto"
+      ],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 47,
+    "video": 7,
+    "photo": 4,
+    "image_path": "eval/gt_images/figure_47.jpg",
+    "original_caption": "Figura 47-Messina-video 7 Foto 4-Fondale ghiaioso con presenza di rocce e ciottoli ricoperti da vegetazione algale",
+    "expected": {
+      "tipo_fondale": "ghiaioso",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": true,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 48,
+    "video": 7,
+    "photo": 5,
+    "image_path": "eval/gt_images/figure_48.jpg",
+    "original_caption": "Figura 48-Messina-video 7 Foto 5-Fondale ghiaioso con presenza di rocce e ciottoli ricoperti da vegetazione algale",
+    "expected": {
+      "tipo_fondale": "ghiaioso",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": true,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 49,
+    "video": 7,
+    "photo": 6,
+    "image_path": "eval/gt_images/figure_49.jpg",
+    "original_caption": "Figura 49-Messina-video 7 Foto 6-Fondale sabbioso misto a ghiaia, con presenza di rocce e ciottoli ricoperti da vegetazione algale",
+    "expected": {
+      "tipo_fondale": "sabbioso_misto_a_ghiaia",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": true,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
       "elementi_antropici": [],
       "fauna": []
     },
@@ -321,7 +938,376 @@
       "presenza_ciottoli": true,
       "copertura_algale": "diffusa",
       "taxa_algali": [],
-      "elementi_antropici": ["tubo_condotta"],
+      "elementi_antropici": [
+        "tubo_condotta"
+      ],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 51,
+    "video": 7,
+    "photo": 8,
+    "image_path": "eval/gt_images/figure_51.jpg",
+    "original_caption": "Figura 51-Messina-video 7 Foto 8- Fondale sabbioso misto a ghiaia, presenza di rocce di probabile origine antropica, ricoperte da vegetazione algale",
+    "expected": {
+      "tipo_fondale": "sabbioso_misto_a_ghiaia",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": false,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [
+        "rocce_antropiche"
+      ],
+      "fauna": []
+    },
+    "annotator_notes": "Rocks of probable anthropic origin → rocce_antropiche in elementi_antropici"
+  },
+  {
+    "figure_id": 52,
+    "video": 7,
+    "photo": 9,
+    "image_path": "eval/gt_images/figure_52.jpg",
+    "original_caption": "Figura 52-Messina-video 7 Foto 9-Fondale sabbioso misto a ghiaia con presenza di ciottoli e rocce ricoperti da vegetazione algale",
+    "expected": {
+      "tipo_fondale": "sabbioso_misto_a_ghiaia",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": true,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 53,
+    "video": 8,
+    "photo": 1,
+    "image_path": "eval/gt_images/figure_53.jpg",
+    "original_caption": "Figura 53-Messina-video 8 Foto 1-Fondale sabbioso misto a ghiaia con presenza di ciottoli e rocce ricoperti da vegetazione algale",
+    "expected": {
+      "tipo_fondale": "sabbioso_misto_a_ghiaia",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": true,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 54,
+    "video": 8,
+    "photo": 2,
+    "image_path": "eval/gt_images/figure_54.jpg",
+    "original_caption": "Figura 54-Messina-video 8 Foto 2-Fondale sabbioso misto a ghiaia con presenza di ciottoli e rocce ricoperti da vegetazione algale, presenza di rifiuti di origine antropica (tubature o parti metalliche)",
+    "expected": {
+      "tipo_fondale": "sabbioso_misto_a_ghiaia",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": true,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [
+        "tubo_condotta",
+        "rifiuto_metallico"
+      ],
+      "fauna": []
+    },
+    "annotator_notes": "Caption ambiguous tubature/metallic; included both"
+  },
+  {
+    "figure_id": 55,
+    "video": 8,
+    "photo": 3,
+    "image_path": "eval/gt_images/figure_55.jpg",
+    "original_caption": "Figura 55-Messina-video 8 Foto 3-Fondale sabbioso misto a ghiaia con presenza di ciottoli e rocce ricoperti da vegetazione algale, presenza di resti di una trave in legno, forse riconducibili a parte di un relitto",
+    "expected": {
+      "tipo_fondale": "sabbioso_misto_a_ghiaia",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": true,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [
+        "trave_in_legno",
+        "parti_di_relitto"
+      ],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 56,
+    "video": 8,
+    "photo": 4,
+    "image_path": "eval/gt_images/figure_56.jpg",
+    "original_caption": "Figura 56-Messina-video 8 Foto 4-Fondale sabbioso misto a ghiaia con presenza di ciottoli e rocce ricoperti da vegetazione algale, presenza di rifiuti antropici",
+    "expected": {
+      "tipo_fondale": "sabbioso_misto_a_ghiaia",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": true,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [
+        "rifiuto_plastico"
+      ],
+      "fauna": []
+    },
+    "annotator_notes": "Generic 'rifiuti antropici'; default plastico"
+  },
+  {
+    "figure_id": 57,
+    "video": 8,
+    "photo": 5,
+    "image_path": "eval/gt_images/figure_57.jpg",
+    "original_caption": "Figura 57-Messina-video 8 Foto 5-Fondale sabbioso misto a ghiaia con presenza di ciottoli e rocce ricoperti da vegetazione algale, presenza di rifiuti antropici",
+    "expected": {
+      "tipo_fondale": "sabbioso_misto_a_ghiaia",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": true,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [
+        "rifiuto_plastico"
+      ],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 58,
+    "video": 8,
+    "photo": 6,
+    "image_path": "eval/gt_images/figure_58.jpg",
+    "original_caption": "Figura 58-Messina-video 8 Foto 6-Fondale sabbioso misto a ghiaia con presenza di ciottoli e rocce ricoperti da vegetazione algale, presenza di rifiuti antropici",
+    "expected": {
+      "tipo_fondale": "sabbioso_misto_a_ghiaia",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": true,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [
+        "rifiuto_plastico"
+      ],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 59,
+    "video": 8,
+    "photo": 7,
+    "image_path": "eval/gt_images/figure_59.jpg",
+    "original_caption": "Figura 59-Messina-video 8 Foto 7-Fondale sabbioso, presenza di ciottoli ricoperte da vegetazione algale,",
+    "expected": {
+      "tipo_fondale": "sabbioso",
+      "granulometria": null,
+      "presenza_rocce": false,
+      "presenza_ciottoli": true,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 60,
+    "video": 8,
+    "photo": 8,
+    "image_path": "eval/gt_images/figure_60.jpg",
+    "original_caption": "Figura 60-Messina-video 8 Foto 8-Fondale sabbioso misto a ghiaia con presenza di ciottoli e rocce ricoperti da vegetazione algale, tra cui probabilmente esemplari del genere Jania, presenza di massi e rifiuti antropici",
+    "expected": {
+      "tipo_fondale": "sabbioso_misto_a_ghiaia",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": true,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [
+        "Jania"
+      ],
+      "elementi_antropici": [
+        "rocce_antropiche",
+        "rifiuto_plastico"
+      ],
+      "fauna": []
+    },
+    "annotator_notes": "Massi antropici + rifiuti antropici both present"
+  },
+  {
+    "figure_id": 61,
+    "video": 8,
+    "photo": 9,
+    "image_path": "eval/gt_images/figure_61.jpg",
+    "original_caption": "Figura 61-Messina-video 8 Foto 9-Fondale sabbioso misto a ghiaia con presenza di ciottoli e rocce ricoperti da vegetazione algale",
+    "expected": {
+      "tipo_fondale": "sabbioso_misto_a_ghiaia",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": true,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 62,
+    "video": 8,
+    "photo": 10,
+    "image_path": "eval/gt_images/figure_62.jpg",
+    "original_caption": "Figura 62-Messina-video 8 Foto 10-Fondale sabbioso misto a ghiaia con presenza di ciottoli e rocce ricoperti da vegetazione algale, presenza di rifiuti antropici",
+    "expected": {
+      "tipo_fondale": "sabbioso_misto_a_ghiaia",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": true,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [
+        "rifiuto_plastico"
+      ],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 63,
+    "video": 8,
+    "photo": 11,
+    "image_path": "eval/gt_images/figure_63.jpg",
+    "original_caption": "Figura 63-Messina-video 8 Foto 11-Fondale sabbioso, presenza di rocce ricoperte da vegetazione algale",
+    "expected": {
+      "tipo_fondale": "sabbioso",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": false,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 64,
+    "video": 8,
+    "photo": 12,
+    "image_path": "eval/gt_images/figure_64.jpg",
+    "original_caption": "Figura 64-Messina-video 8 Foto 12-Fondale sabbioso, presenza di rocce ricoperte da vegetazione algale",
+    "expected": {
+      "tipo_fondale": "sabbioso",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": false,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 65,
+    "video": 8,
+    "photo": 13,
+    "image_path": "eval/gt_images/figure_65.jpg",
+    "original_caption": "Figura 65-Messina-video 8 Foto 13-Fondale sabbioso misto a ghiaia, presenza di numerose rocce ricoperte da vegetazione algale, presenza di rifiuti antropici",
+    "expected": {
+      "tipo_fondale": "sabbioso_misto_a_ghiaia",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": false,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [
+        "rifiuto_plastico"
+      ],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 66,
+    "video": 8,
+    "photo": 14,
+    "image_path": "eval/gt_images/figure_66.jpg",
+    "original_caption": "Figura 66-Messina-video 8 Foto 14-Fondale sabbioso misto a ghiaia con presenza di ciottoli e rocce ricoperti da vegetazione algale",
+    "expected": {
+      "tipo_fondale": "sabbioso_misto_a_ghiaia",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": true,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 67,
+    "video": 8,
+    "photo": 15,
+    "image_path": "eval/gt_images/figure_67.jpg",
+    "original_caption": "Figura 67-Messina-video 8 Foto 15-Fondale ghiaioso misto a ciottoli e rocce di piccola taglia",
+    "expected": {
+      "tipo_fondale": "ghiaioso",
+      "granulometria": "ciottoli_piccoli",
+      "presenza_rocce": true,
+      "presenza_ciottoli": true,
+      "copertura_algale": "assente",
+      "taxa_algali": [],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 68,
+    "video": 8,
+    "photo": 16,
+    "image_path": "eval/gt_images/figure_68.jpg",
+    "original_caption": "Figura 68-Messina-video 8 Foto 16-Fondale ghiaioso misto a ciottoli e rocce di piccola taglia, ricoperti da vegetazione algale",
+    "expected": {
+      "tipo_fondale": "ghiaioso",
+      "granulometria": "ciottoli_piccoli",
+      "presenza_rocce": true,
+      "presenza_ciottoli": true,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 69,
+    "video": 8,
+    "photo": 17,
+    "image_path": "eval/gt_images/figure_69.jpg",
+    "original_caption": "Figura 69-Messina-video 8 Foto 17-Fondale ghiaioso, presenza di rocce antropiche ricoperte da vegetazione algale",
+    "expected": {
+      "tipo_fondale": "ghiaioso",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": false,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [
+        "rocce_antropiche"
+      ],
       "fauna": []
     },
     "annotator_notes": ""
@@ -338,11 +1324,290 @@
       "presenza_rocce": true,
       "presenza_ciottoli": false,
       "copertura_algale": "diffusa",
-      "taxa_algali": ["Asparagopsis"],
-      "elementi_antropici": ["rocce_antropiche"],
+      "taxa_algali": [
+        "Asparagopsis"
+      ],
+      "elementi_antropici": [
+        "rocce_antropiche"
+      ],
       "fauna": [
-        {"tipo": "riccio_di_mare", "specie": "Arbacia lixula"}
+        {
+          "tipo": "riccio_di_mare",
+          "specie": "Arbacia lixula"
+        }
       ]
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 71,
+    "video": 8,
+    "photo": 19,
+    "image_path": "eval/gt_images/figure_71.jpg",
+    "original_caption": "Figura 71-Messina-video 8 Foto 19-Fondale sabbioso alternato da qualche roccia ricoperta da vegetazione algale, presenza di una condotta sottomarina emersa rispetto al substrato",
+    "expected": {
+      "tipo_fondale": "sabbioso",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": false,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [
+        "tubo_condotta"
+      ],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 72,
+    "video": 8,
+    "photo": 20,
+    "image_path": "eval/gt_images/figure_72.jpg",
+    "original_caption": "Figura 72-Messina-video 8 Foto 20-Fondale sabbioso con a fianco rocce antropiche ricoperte da vegetazione algale, presenza di una condotta sottomarina emersa rispetto al substrato sabbioso algale",
+    "expected": {
+      "tipo_fondale": "sabbioso",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": false,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [
+        "rocce_antropiche",
+        "tubo_condotta"
+      ],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 73,
+    "video": 8,
+    "photo": 21,
+    "image_path": "eval/gt_images/figure_73.jpg",
+    "original_caption": "Figura 73-Messina-video 8 Foto 21-Fondale sabbioso con presenza di rocce ricoperte da vegetazione algale",
+    "expected": {
+      "tipo_fondale": "sabbioso",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": false,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 74,
+    "video": 8,
+    "photo": 22,
+    "image_path": "eval/gt_images/figure_74.jpg",
+    "original_caption": "Figura 74-Messina-video 8 Foto 22-Fondale sabbioso misto a ghiaia con presenza di rocce ricoperte da vegetazione algale",
+    "expected": {
+      "tipo_fondale": "sabbioso_misto_a_ghiaia",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": false,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 75,
+    "video": 9,
+    "photo": 1,
+    "image_path": "eval/gt_images/figure_75.jpg",
+    "original_caption": "Figura 75-Messina-video 9 Foto 1-Fondale sabbioso misto a ghiaia con presenza di rocce antropiche ricoperte da vegetazione algale",
+    "expected": {
+      "tipo_fondale": "sabbioso_misto_a_ghiaia",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": false,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [
+        "rocce_antropiche"
+      ],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 76,
+    "video": 9,
+    "photo": 2,
+    "image_path": "eval/gt_images/figure_76.jpg",
+    "original_caption": "Figura 76-Messina-video 9 Foto 2-Fondale sabbioso misto a ghiaia con presenza di massi antropici e rocce ricoperti da vegetazione algale",
+    "expected": {
+      "tipo_fondale": "sabbioso_misto_a_ghiaia",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": false,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [
+        "rocce_antropiche"
+      ],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 77,
+    "video": 9,
+    "photo": 3,
+    "image_path": "eval/gt_images/figure_77.jpg",
+    "original_caption": "Figura 77-Messina-video 9 Foto 3-Fondale sabbioso misto a ghiaia con presenza di massi antropici e rocce ricoperti da vegetazione algale",
+    "expected": {
+      "tipo_fondale": "sabbioso_misto_a_ghiaia",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": false,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [
+        "rocce_antropiche"
+      ],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 78,
+    "video": 9,
+    "photo": 4,
+    "image_path": "eval/gt_images/figure_78.jpg",
+    "original_caption": "Figura 78-Messina-video 9 Foto 4-Fondale ghiaioso con presenza sporadica di rocce ricoperte da vegetazione algale",
+    "expected": {
+      "tipo_fondale": "ghiaioso",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": false,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": "Sporadic rocks but algae explicitly 'ricoperte' → diffusa"
+  },
+  {
+    "figure_id": 79,
+    "video": 9,
+    "photo": 5,
+    "image_path": "eval/gt_images/figure_79.jpg",
+    "original_caption": "Figura 79-Messina-video 9 Foto 5-Fondale ghiaioso con presenza di rocce e ciottoli ricoperti da vegetazione algale",
+    "expected": {
+      "tipo_fondale": "ghiaioso",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": true,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 80,
+    "video": 9,
+    "photo": 6,
+    "image_path": "eval/gt_images/figure_80.jpg",
+    "original_caption": "Figura 80-Messina-video 9 Foto 6-Fondale ghiaioso",
+    "expected": {
+      "tipo_fondale": "ghiaioso",
+      "granulometria": null,
+      "presenza_rocce": false,
+      "presenza_ciottoli": false,
+      "copertura_algale": "assente",
+      "taxa_algali": [],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 81,
+    "video": 10,
+    "photo": 1,
+    "image_path": "eval/gt_images/figure_81.jpg",
+    "original_caption": "Figura 81-Messina-video 10 Foto 1-Fondale sabbioso, presenza di rocce ricoperte da vegetazione algale",
+    "expected": {
+      "tipo_fondale": "sabbioso",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": false,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 82,
+    "video": 10,
+    "photo": 2,
+    "image_path": "eval/gt_images/figure_82.jpg",
+    "original_caption": "Figura 82-Messina-video 10 Foto 2-Fondale sabbioso, presenza di rocce e ciottoli ricoperti da vegetazione algale",
+    "expected": {
+      "tipo_fondale": "sabbioso",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": true,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 83,
+    "video": 10,
+    "photo": 3,
+    "image_path": "eval/gt_images/figure_83.jpg",
+    "original_caption": "Figura 83-Messina-video 10 Foto 3-Fondale costituito da massi antropici ricoperti da vegetazione algale, tra cui probabilmente la specie Asparagopsis armata (alga rossa). Presenza di esemplari di ricci di mare probabilmente della specie Arbacia lixula",
+    "expected": {
+      "tipo_fondale": "rocce_antropiche",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": false,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [
+        "Asparagopsis"
+      ],
+      "elementi_antropici": [
+        "rocce_antropiche"
+      ],
+      "fauna": [
+        {
+          "tipo": "riccio_di_mare",
+          "specie": "Arbacia lixula"
+        }
+      ]
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 84,
+    "video": 10,
+    "photo": 4,
+    "image_path": "eval/gt_images/figure_84.jpg",
+    "original_caption": "Figura 84-Messina-video 10 Foto 4-Fondale ghiaioso con presenza sporadica di rocce ricoperte da vegetazione algale",
+    "expected": {
+      "tipo_fondale": "ghiaioso",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": false,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [],
+      "fauna": []
     },
     "annotator_notes": ""
   },
@@ -358,10 +1623,185 @@
       "presenza_rocce": false,
       "presenza_ciottoli": false,
       "copertura_algale": "diffusa",
-      "taxa_algali": ["Corallinales", "Peyssonelia"],
+      "taxa_algali": [
+        "Corallinales",
+        "Peyssonelia"
+      ],
       "elementi_antropici": [],
       "fauna": []
     },
-    "annotator_notes": "GT mentions Peyssonneliales (order) and alghe brune (brown algae) which has no specific enum entry; encoded as Peyssonelia (closest schema match) and omitted brown algae"
+    "annotator_notes": "Brown algae (Laminariales? not specified) omitted from taxa_algali"
+  },
+  {
+    "figure_id": 86,
+    "video": 10,
+    "photo": 6,
+    "image_path": "eval/gt_images/figure_86.jpg",
+    "original_caption": "Figura 86-Messina-video 10 Foto 6-Fondale ghiaioso con presenza di alghe, tra cui alghe rosse incrostanti probabilmente appartenenti all'ordine delle Corallinales e/o all'ordine delle Peyssonneliales, e alghe brune",
+    "expected": {
+      "tipo_fondale": "ghiaioso",
+      "granulometria": null,
+      "presenza_rocce": false,
+      "presenza_ciottoli": false,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [
+        "Corallinales",
+        "Peyssonelia"
+      ],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 87,
+    "video": 11,
+    "photo": 1,
+    "image_path": "eval/gt_images/figure_87.jpg",
+    "original_caption": "Figura 87-Messina-video 11 Foto 1-Fondale ghiaioso ricoperto di rocce e ciottoli vegetati da alghe, presenza di un esemplare di stella marina (Ophidiaster ophidianus)",
+    "expected": {
+      "tipo_fondale": "ghiaioso",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": true,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [],
+      "elementi_antropici": [],
+      "fauna": [
+        {
+          "tipo": "stella_marina",
+          "specie": "Ophidiaster ophidianus"
+        }
+      ]
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 88,
+    "video": 11,
+    "photo": 1,
+    "image_path": "eval/gt_images/figure_88.jpg",
+    "original_caption": "Figura 88-Messina-video 11 Foto 1-Particolare mollusco bivalve - Zoom del fotogramma per possibile presenza del mollusco bivalve appartente al genere Pinna",
+    "expected": {
+      "tipo_fondale": null,
+      "granulometria": null,
+      "presenza_rocce": false,
+      "presenza_ciottoli": false,
+      "copertura_algale": "assente",
+      "taxa_algali": [],
+      "elementi_antropici": [],
+      "fauna": [
+        {
+          "tipo": "mollusco_bivalve",
+          "specie": "Pinna"
+        }
+      ]
+    },
+    "annotator_notes": "Zoom-only frame; substrate fields N/A but encoded conservatively"
+  },
+  {
+    "figure_id": 89,
+    "video": 11,
+    "photo": 2,
+    "image_path": "eval/gt_images/figure_89.jpg",
+    "original_caption": "Figura 89-Messina-video 11 Foto 2-Fondale ghiaioso misto a rocce e ciottoli ricoperti da vegetazione algale, presenza di alga rossa riconducibile probabilmente al genere Asparagopsis",
+    "expected": {
+      "tipo_fondale": "ghiaioso",
+      "granulometria": null,
+      "presenza_rocce": true,
+      "presenza_ciottoli": true,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [
+        "Asparagopsis"
+      ],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 90,
+    "video": 11,
+    "photo": 3,
+    "image_path": "eval/gt_images/figure_90.jpg",
+    "original_caption": "Figura 90-Messina-video 11 Foto 3-Fondale ghiaioso con alghe incrostanti rosse probabilmente appartenenti all'ordine delle Corallinales, presenza di alga rossa riconducibile probabilmente al genere Asparagopsis",
+    "expected": {
+      "tipo_fondale": "ghiaioso",
+      "granulometria": null,
+      "presenza_rocce": false,
+      "presenza_ciottoli": false,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [
+        "Corallinales",
+        "Asparagopsis"
+      ],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 91,
+    "video": 11,
+    "photo": 4,
+    "image_path": "eval/gt_images/figure_91.jpg",
+    "original_caption": "Figura 91-Messina-video 11 Foto 4-Fondale ghiaioso con alghe incrostanti rosse probabilmente appartenenti all'ordine delle Corallinales, presenza di alga rossa riconducibile probabilmente al genere Asparagopsis, presenza di uno pneumatico ricoperto da vegetazione algale",
+    "expected": {
+      "tipo_fondale": "ghiaioso",
+      "granulometria": null,
+      "presenza_rocce": false,
+      "presenza_ciottoli": false,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [
+        "Corallinales",
+        "Asparagopsis"
+      ],
+      "elementi_antropici": [
+        "pneumatico"
+      ],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 92,
+    "video": 11,
+    "photo": 5,
+    "image_path": "eval/gt_images/figure_92.jpg",
+    "original_caption": "Figura 92-Messina-video 11 Foto 5-Fondale ghiaioso con alghe incrostanti rosse probabilmente appartenenti all'ordine delle Corallinales, presenza di alga rossa riconducibile probabilmente al genere Asparagopsis",
+    "expected": {
+      "tipo_fondale": "ghiaioso",
+      "granulometria": null,
+      "presenza_rocce": false,
+      "presenza_ciottoli": false,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [
+        "Corallinales",
+        "Asparagopsis"
+      ],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": ""
+  },
+  {
+    "figure_id": 93,
+    "video": 11,
+    "photo": 6,
+    "image_path": "eval/gt_images/figure_93.jpg",
+    "original_caption": "Figura 93-Messina-video 11 Foto 6-Fondale ghiaioso con alghe incrostanti rosse probabilmente appartenenti all'ordine delle Corallinales",
+    "expected": {
+      "tipo_fondale": "ghiaioso",
+      "granulometria": null,
+      "presenza_rocce": false,
+      "presenza_ciottoli": false,
+      "copertura_algale": "diffusa",
+      "taxa_algali": [
+        "Corallinales"
+      ],
+      "elementi_antropici": [],
+      "fauna": []
+    },
+    "annotator_notes": ""
   }
 ]
