@@ -27,6 +27,7 @@ def run_pipeline(
     gpx_path: Path | None = None,
     use_embeddings: bool = True,
     embedding_threshold: float = 0.92,
+    enhance: bool = True,
 ) -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
     frames_dir = out_dir / "frames"
@@ -82,10 +83,15 @@ def run_pipeline(
         from .embed import load_local_embedder, embed_frame
         embedder = load_local_embedder()
 
+    if enhance:
+        from .enhance import enhance_frame
+
     analyses = []
     embeddings: list = []
     for i, c in enumerate(cands, 1):
         print(f"[4/5] VLM {i}/{len(cands)} (t={c.t_sec:.1f}s, score={c.score:.2f})…", flush=True)
+        if enhance:
+            c.image = enhance_frame(c.image)
         try:
             analyses.append(call(c.image))
         except Exception as e:  # noqa: BLE001

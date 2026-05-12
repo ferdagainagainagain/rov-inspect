@@ -10,6 +10,12 @@ Rov_Immagine.docx
 # Outputs
 out/
 
+# Eval — extracted GT images derive from the private docx; results
+# are per-config and not worth versioning. The annotation JSONs ARE
+# tracked.
+eval/gt_images/
+eval/results/
+
 # Model cache (HF will manage this in ~/.cache; just in case)
 .huggingface/
 

@@ -66,6 +66,14 @@ def main() -> None:
         help="Cosine-similarity threshold above which adjacent frames are "
              "considered the same content (default: 0.92).",
     )
+    p.add_argument(
+        "--enhance",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help="Apply underwater image enhancement (gray-world WB, CLAHE on "
+             "L*, mild unsharp mask) before VLM + embedding (default: on). "
+             "Pass --no-enhance to use raw frames.",
+    )
     args = p.parse_args()
 
     model = args.model
@@ -86,6 +94,7 @@ def main() -> None:
         gpx_path=args.gpx,
         use_embeddings=args.use_embeddings,
         embedding_threshold=args.embedding_threshold,
+        enhance=args.enhance,
     )
 
 
