@@ -30,7 +30,8 @@ def main() -> None:
     p.add_argument("--start", type=float, default=0.0)
     p.add_argument("--end", type=float, default=None)
     p.add_argument("--sample-fps", type=float, default=1.0)
-    p.add_argument("--top-per-minute", type=int, default=6)
+    p.add_argument("--top-per-bucket", type=int, default=3)
+    p.add_argument("--bucket-seconds", type=int, default=20)
 
     p.add_argument(
         "--backend",
@@ -50,6 +51,21 @@ def main() -> None:
         help="Override model name. Local default: Qwen2.5-VL-7B-Instruct-4bit. "
              "API default: claude-sonnet-4-6.",
     )
+    p.add_argument(
+        "--use-embeddings",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help="Use DINOv3 embeddings for content-aware segment dedup "
+             "(default: on). Pass --no-use-embeddings for categorical-only "
+             "merging — required for ablation comparisons.",
+    )
+    p.add_argument(
+        "--embedding-threshold",
+        type=float,
+        default=0.92,
+        help="Cosine-similarity threshold above which adjacent frames are "
+             "considered the same content (default: 0.92).",
+    )
     args = p.parse_args()
 
     model = args.model
@@ -63,10 +79,13 @@ def main() -> None:
         start_sec=args.start,
         end_sec=args.end,
         sample_fps=args.sample_fps,
-        top_per_minute=args.top_per_minute,
+        top_per_bucket=args.top_per_bucket,
+        bucket_seconds=args.bucket_seconds,
         backend=args.backend,
         model=model,
         gpx_path=args.gpx,
+        use_embeddings=args.use_embeddings,
+        embedding_threshold=args.embedding_threshold,
     )
 
 

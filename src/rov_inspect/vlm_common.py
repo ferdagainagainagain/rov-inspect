@@ -30,6 +30,13 @@ def user_prompt(schema_json: str) -> str:
 {schema_json}
 
 Operational guidelines:
+- REASONING PROCESS: First, examine the FULL frame in English. What is
+  the DOMINANT feature — is it sand, gravel, or rock? Do not default to
+  "sabbioso" just because some sand is visible. If rocks or boulders
+  occupy more than ~30% of the frame, the dominant category is
+  rocce_antropiche or roccioso, NOT sabbioso. Only after determining the
+  dominant feature in English, emit the appropriate Italian enum value.
+
 - GENERAL PRINCIPLE: when in doubt, OMIT. It is far better not to report
   an uncertain element than to identify it incorrectly.
 

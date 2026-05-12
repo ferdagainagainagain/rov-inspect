@@ -40,6 +40,7 @@ COLUMN_MAP_DEFAULT: dict[str, str] = {
     'heading (°)':       'heading_deg',
     'roll (°)':          'roll_deg',
     'pitch (°)':         'pitch_deg',
+    'camera pitch (°)':  'camera_pitch_deg',
 }
 
 

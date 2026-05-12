@@ -61,6 +61,9 @@ this is the single most important convention.
 - Do **not** add new categorical values that aren't attested in the GT
   without flagging it.
 - Do **not** import `anthropic` outside `vlm_api.py`.
+- Do **not** change the DINOv3 model size without confirming — the
+  transformers/PyTorch-MPS path has fixed model names and memory
+  footprints that matter.
 
 ## Common tasks
 

@@ -41,8 +41,23 @@ def extract_candidates(
     sample_fps: float = 1.0,
     start_sec: float = 0.0,
     end_sec: float | None = None,
-    top_per_minute: int = 6,
+    top_per_bucket: int = 3,
+    bucket_seconds: int = 20,
 ) -> list[FrameCandidate]:
+    """Sample frames from the video and score them for VLM-worthiness.
+
+    Candidates are grouped into fixed-width time buckets of
+    ``bucket_seconds`` and the top ``top_per_bucket`` frames by composite
+    score are kept from each bucket. Bucketing by a fixed interval
+    (rather than per-minute) forces uniform temporal coverage across the
+    video — long stretches of "good" footage cannot drown out shorter
+    stretches.
+
+    Shallow-depth frames are dropped only when the camera is not pointed
+    downward (likely water-surface or descent/ascent artifacts). Shallow
+    frames captured with a downward-tilted camera — e.g. breakwater
+    inspections in shallow port water — are kept as valid survey content.
+    """
     cap = cv2.VideoCapture(str(video_path))
     if not cap.isOpened():
         raise FileNotFoundError(f"Cannot open video: {video_path}")
@@ -69,11 +84,15 @@ def extract_candidates(
             telem_row = telemetry.at_frame(fi)
             speed = float(telem_row.get('speed_mps', 0.0))
             depth = float(telem_row.get('depth_m', 999.0))
+            camera_pitch = float(telem_row.get('camera_pitch_deg', -30.0))
         except (IndexError, KeyError):
             speed = 0.0
             depth = 999.0
+            camera_pitch = -30.0
 
-        if depth < 0.8:
+        # Skip likely water-surface artifacts: shallow AND camera not pointed down.
+        # Allows shallow survey content (e.g. breakwater inspection) to pass through.
+        if depth < 0.8 and camera_pitch > -10.0:
             continue
 
         raw.append(FrameCandidate(
@@ -105,10 +124,10 @@ def extract_candidates(
 
     buckets: dict[int, list[FrameCandidate]] = {}
     for c in raw:
-        buckets.setdefault(int(c.t_sec // 60), []).append(c)
+        buckets.setdefault(int(c.t_sec // bucket_seconds), []).append(c)
     selected: list[FrameCandidate] = []
     for bucket in buckets.values():
         bucket.sort(key=lambda x: -x.score)
-        selected.extend(bucket[:top_per_minute])
+        selected.extend(bucket[:top_per_bucket])
     selected.sort(key=lambda x: x.t_sec)
     return selected

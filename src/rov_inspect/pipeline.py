@@ -20,10 +20,13 @@ def run_pipeline(
     start_sec: float = 0.0,
     end_sec: float | None = None,
     sample_fps: float = 1.0,
-    top_per_minute: int = 6,
+    top_per_bucket: int = 3,
+    bucket_seconds: int = 20,
     backend: Backend = "local",
     model: str | None = None,
     gpx_path: Path | None = None,
+    use_embeddings: bool = True,
+    embedding_threshold: float = 0.92,
 ) -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
     frames_dir = out_dir / "frames"
@@ -49,7 +52,8 @@ def run_pipeline(
         sample_fps=sample_fps,
         start_sec=start_sec,
         end_sec=end_sec,
-        top_per_minute=top_per_minute,
+        top_per_bucket=top_per_bucket,
+        bucket_seconds=bucket_seconds,
     )
     if not cands:
         print("No candidates extracted — check the time range.")
@@ -73,7 +77,13 @@ def run_pipeline(
     else:
         raise ValueError(f"Unknown backend: {backend!r}")
 
+    embedder = None
+    if use_embeddings:
+        from .embed import load_local_embedder, embed_frame
+        embedder = load_local_embedder()
+
     analyses = []
+    embeddings: list = []
     for i, c in enumerate(cands, 1):
         print(f"[4/5] VLM {i}/{len(cands)} (t={c.t_sec:.1f}s, score={c.score:.2f})…", flush=True)
         try:
@@ -81,16 +91,41 @@ def run_pipeline(
         except Exception as e:  # noqa: BLE001
             print(f"      skipped: {type(e).__name__}: {e}")
             analyses.append(None)
+        if embedder is not None:
+            try:
+                embeddings.append(embed_frame(c.image, embedder))
+            except Exception as e:  # noqa: BLE001
+                print(f"      embed skipped: {type(e).__name__}: {e}")
+                embeddings.append(None)
 
-    paired = [(c, a) for c, a in zip(cands, analyses) if a is not None]
-    if not paired:
-        print("All VLM calls failed. Aborting.")
-        return
-    cands_ok, analyses_ok = zip(*paired)
-    cands_ok, analyses_ok = list(cands_ok), list(analyses_ok)
+    if embedder is not None:
+        paired = [
+            (c, a, e)
+            for c, a, e in zip(cands, analyses, embeddings)
+            if a is not None and e is not None
+        ]
+        if not paired:
+            print("All VLM calls failed. Aborting.")
+            return
+        cands_ok = [t[0] for t in paired]
+        analyses_ok = [t[1] for t in paired]
+        embeddings_ok = [t[2] for t in paired]
+    else:
+        paired = [(c, a) for c, a in zip(cands, analyses) if a is not None]
+        if not paired:
+            print("All VLM calls failed. Aborting.")
+            return
+        cands_ok = [t[0] for t in paired]
+        analyses_ok = [t[1] for t in paired]
+        embeddings_ok = None
 
     # ── 5. Segment + render
-    segments = merge_segments(cands_ok, analyses_ok)
+    segments = merge_segments(
+        cands_ok,
+        analyses_ok,
+        embeddings=embeddings_ok,
+        embedding_threshold=embedding_threshold,
+    )
     print(f"[5/5] {len(segments)} segments after dedup → rendering")
 
     items = []
