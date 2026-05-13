@@ -1,4 +1,4 @@
-# rov-inspect
+gi# rov-inspect
 
 A local pipeline that turns ROV underwater video and Deep Trekker telemetry into structured Italian inspection reports. A vision-language model classifies each candidate frame against a fixed Pydantic schema derived from 93 expert-curated reference frames; the output is a Markdown report with representative figures, depth, GPS, and timestamps. Everything runs on Apple Silicon — no API calls, no costs, no data leaving the device.
 
@@ -36,8 +36,10 @@ src/rov_inspect/   Pipeline modules — schema, sync, candidates, enhance,
                    vlm_local, embed, segment, render, pipeline
 scripts/           CLI entry points; run_pipeline.py is the main one
 eval/              GT extraction, eval runner, F1/Jaccard comparator
-docs/              PROJECT_LOG.md (decisions), NOTES.md (design notes),
+docs/              PROJECT_LOG.md (decisions + design notes),
                    archive/ (superseded artifacts)
+demo/              Committed example outputs — Video 3 report and one
+                   SAM 3 verification figure
 data/              Videos, telemetry, GPX — gitignored, provided externally
 out/               Per-run reports and frames — gitignored
 ```
@@ -60,6 +62,40 @@ python scripts/run_pipeline.py \
 
 The `--no-enhance`, `--no-use-embeddings`, and `--model` flags exist as deliberate ablation hooks — use them when comparing configurations. The default values above are the production-tuned ones; changing them will affect output quality and invalidate comparisons against the documented evaluation results.
 
+## Running SAM 3 spatial verification
+
+Optional post-processing layer that adds pixel-level outlines on top of the VLM's categorical claims. For each figure in `report.md`, the script reads the Italian `Descrizione` line, looks up which findings the VLM named (rocce / ciottoli / vegetazione / rete / tubo / condotta / rifiuto / relitto), runs SAM 3 with the corresponding English text prompt, and draws outline-only contours per class onto the frame. No fill — the original image stays fully visible inside each contour so you can judge SAM 3's localization without colour bleed.
+
+### Setup
+
+SAM 3 weights are gated on Hugging Face. Request access at <https://huggingface.co/facebook/sam3>, then authenticate locally:
+
+```bash
+hf auth login
+```
+
+The model (~1.5 GB) auto-downloads on first run to `~/.cache/huggingface`.
+
+### Run
+
+```bash
+python scripts/run_sam3_postprocess.py --make-comparison
+```
+
+The script is currently hardcoded to `out/video3_enhanced` (a `--run-dir` argument is accepted but ignored). It writes to `out/video3_enhanced/sam3_verification/`:
+
+- `figure_NN_overlay.png` — outline overlay
+- `figure_NN_comparison.png` — side-by-side original | overlay (only with `--make-comparison`)
+- `figure_NN_coverage.json` — matched VLM keywords, per-prompt coverage, per-class coverage
+- `summary.json` — run-wide aggregate
+- `sam_verification.md` — consolidated demo report linking the per-figure comparisons
+
+### What to expect
+
+SAM 3 runs ~2–4 s/frame on MPS. The selector only fires prompts the VLM hinted at, so most figures need only one or two prompts. Empirically on Messina data: `rocks` fires reliably on rocky frames (often 30–90% area), `vegetation` fires sparsely (0–3%), `cobbles` rarely grounds anything — see `docs/PROJECT_LOG.md` for the full empirical write-up and why fauna was deliberately dropped from the prompt set.
+
+A committed example output lives at [demo/video3_enhanced/sam3_verification/figure_18_comparison.png](demo/video3_enhanced/sam3_verification/figure_18_comparison.png).
+
 ## Running the evaluation
 
 The ground truth is extracted from a private docx; both the extractor and the 93-entry annotation JSON are tracked in git.
@@ -77,7 +113,7 @@ Current baseline (Gemma 4 E4B, 4-bit, all 93 GT entries): aggregate F1 = 0.515 w
 
 ## Project log and decisions
 
-[docs/PROJECT_LOG.md](docs/PROJECT_LOG.md) is the single most important document for a new collaborator. It explains why the pipeline looks the way it does, what we tried and rejected, and where the next interesting work lies (SAM 3, V-JEPA, Qwen3-VL comparison).
+[docs/PROJECT_LOG.md](docs/PROJECT_LOG.md) is the single most important document for a new collaborator. It explains why the pipeline looks the way it does, what we tried and rejected, and where the next interesting work lies (V-JEPA, Qwen3-VL comparison).
 
 ## Hardware requirements
 

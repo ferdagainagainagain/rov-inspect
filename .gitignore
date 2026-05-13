@@ -10,6 +10,13 @@ Rov_Immagine.docx
 # Outputs
 out/
 
+# SAM 3 post-processing outputs (regenerable; live alongside pipeline runs).
+# Already covered by out/, but listed explicitly so that SAM outputs land in
+# .gitignore wherever they're produced. Curated examples for the repo live
+# under demo/ instead, which is tracked.
+sam3/
+sam3_verification/
+
 # Eval — extracted GT images derive from the private docx; results
 # are per-config and not worth versioning. The annotation JSONs ARE
 # tracked.

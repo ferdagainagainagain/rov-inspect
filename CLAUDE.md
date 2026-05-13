@@ -64,6 +64,9 @@ this is the single most important convention.
 - Do **not** change the DINOv3 model size without confirming — the
   transformers/PyTorch-MPS path has fixed model names and memory
   footprints that matter.
+- SAM 3 inference is ~20 sec/frame on MPS. Don't run
+  `scripts/run_sam3_postprocess.py --all-frames` on full videos
+  without warning the user. The selective default exists for a reason.
 
 ## Common tasks
 
